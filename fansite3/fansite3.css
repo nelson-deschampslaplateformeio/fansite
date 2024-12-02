@@ -8,16 +8,40 @@
     box-sizing: border-box;
     color: white;
     line-height: 1.4;
+    font-size: medium;
 }
 
 body {
     /* Pour coller le menu au bord, sans espace */
     margin: 0;
-    background-color: red;
+    background-color: black;
+}
+header {
+    block-size: 50px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: solid white;
 }
 
-.nav {
+#logo {
+    width: 35px;   
+}
+
+#titre {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#titre h1{
+    font-size: x-large;
+}
+
+#lien-nav {
     list-style-type: none;
+    inline-size: auto;
 }
 
 nav a {
@@ -50,28 +74,25 @@ nav a:hover {
     border-radius: 50%;
     float: right;
     shape-outside: margin-box;
-    margin: auto;
+    margin: 5px;
 }
 
-@media screen and (max-width: 768px) {
+footer *{
+    font-size: small;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
 
-    header {
-        block-size: 50px;
-        position: fixed;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: black;
-    }
 
-    #logo {
-        width: 25px;
-        margin: 10px;   
-    }
+@media screen and (max-width: 800px) {
+
+    
 
     .menu {
         /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
-        width: 40px;
+        width: 35px;
     }
 
     #hamburger-logo {
@@ -80,22 +101,18 @@ nav a:hover {
         color: white;
         background-color: black;
         width: 200px;
-        padding: 10px;
-        /* Pour que le menu hamburger soit "rangé" par défaut */
-        transform: translateX(-120px);
-        /* Pour qu'il y ait une animation */
-        transition: 0.5s;
+        padding: 5%;
+        font-size: x-large;
         
     }
 
-    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
-
+    /* Lorsque #hamburger est coché, le nav change de propriété */
     #hamburger:checked ~ nav {
         /* Changement de la position pour afficher les menus */
         transform: translate(-120px);
     }
 
-    nav {
+    #nav-header {
         display: flex;
         flex-direction: column;
         background-color: black;
@@ -110,28 +127,13 @@ nav a:hover {
 }
 
 
-@media screen and (min-width: 768px) {
-
-    header {
-        block-size: 50px;
-        position: fixed;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: black;
-    }
-
-    #logo {
-        width: 25px;
-        margin: 10px;   
-    }
+@media screen and (min-width: 801px) {
 
     #hamburger-logo{
         display: none;
     }
 
-    .nav{
+    #lien-nav{
         display: flex;
         flex-flow: row nowrap;
         gap: 20px;
