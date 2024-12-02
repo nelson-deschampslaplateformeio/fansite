@@ -1,110 +1,116 @@
-
 #hamburger {
     /* Pour que la checkbox ne s'affiche pas */
     display: none;
   }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     * {
         /* Pour que les tailles soient correctes */
         box-sizing: border-box;
-      }
+        color: white;
+    }
       
-      body {
+    body {
         /* Pour coller le menu au bord, sans espace */
         margin: 0;
-        background-color: green;
-        height: 10000px;
-      }
-      
-      .menu {
-        /* Pour que le menu reste en place quand on scroll */
+        background-color: black;
+    }
+
+    header {
+        block-size: 50px;
         position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    #logo {
+        width: 25px;
+        margin: 10px;
+        
+    }
+
+    .menu {
         /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
-        width: 0px;
-      }
-      
-      main {
-        /* Pour que le texte ne soit pas sous le menu */
-        margin-left: 50px;
-        width: 500px;
-        text-align: justify;
-      }
-      
-      #hamburger-logo {
+        width: 40px;
+    }
+
+    #hamburger-logo {
         /* Pour que le curseur soit un pointeur */
         cursor: pointer;
-        background: black;
-        width: 200px;
-        display: block;
         color: white;
-        /* Pour que le menu hamburger s'affiche toujours */
-        text-align: left;
-        /* Pour que le menu hamburger soit "rangé" par défaut */
-        transform: translateX(-168px);
+        background-color: black;
+        width: 200px;
         padding: 10px;
-      }
-      
-      nav {
+        /* Pour que le menu hamburger soit "rangé" par défaut */
+        transform: translateX(-120px);
+        /* Pour qu'il y ait une animation */
+        transition: 0.5s;
+        
+    }
+
+    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+
+    #hamburger:checked ~ nav {
+        /* Changement de la position pour afficher les menus */
+        transform: translate(-120px);
+    }
+
+    nav {
         display: flex;
         flex-direction: column;
-        background: black;
+        background-color: black;
         overflow: hidden;
-        width: 200px;
+        width: 200px; 
         /* Pour que les liens soient "rangés" par défaut */
-        transform: translateX(-200px);
-      }
-      
-      #hamburger-logo,
-      nav {
+        transform: translateX(1000px);
         /* Pour qu'il y ait une animation */
-        transition: 0.7s;
-      }
-      
-      /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
-      #hamburger:checked ~ #hamburger-logo,
-      #hamburger:checked ~ nav {
-        /* Changement de la position pour afficher les menus */
-        transform: translate(0);
-      }
-      
-      nav a {
+        transition: 0.5s;
+    }
+
+    .nav {
+        list-style-type: none;
+    }
+
+    nav a {
         color: white;
         text-decoration: none;
-        padding: 10px;
-      }
+        padding: 1px;
+    }
       
-      nav a:hover {
-        background: #444;
-      }
-      
+    nav a:hover {
+        background-color: white;
+        color: black;
+    }
+    .actuel {
+        background-color: white;
+        color: black;
+    }
+
+    main {
+        /* Pour que le texte ne soit pas sous le menu */
+        padding: 100px 50px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.7;
+    }
+
+    #AA {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        float: right;
+        shape-outside: margin-box;
+        margin: auto;
+    }
 }
 
 
-@media screen and (min-width: 768px){
-    ul{
-        background-color: black;
-        list-style-type: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;   
-    }
-    body{
-        background-color: red;
-        height: 10000px;
-        margin: 0;
-    }
-    header{
-        position: fixed;
-        width: 100%;
-        background-color: #333;
-        margin:0px
-    }
-    nav{
-        width: 100%;
-        background-color: green;
-        display: grid;
-        grid-template-columns: 50px 1fr;
-        grid-template-rows: 100%;        
-    }  
+@media screen and (min-width: 768px) {
+
+
+ 
 }
