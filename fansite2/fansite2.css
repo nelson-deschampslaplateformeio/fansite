@@ -1,0 +1,186 @@
+@media screen and (max-width: 800px){
+    
+*{
+    box-sizing: border-box;
+}
+  
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+
+}
+  
+menu{
+    position: fixed;
+    width: 0px;
+}
+  
+#hamburger{
+    display: none;
+}
+  
+#hamburger-logo{
+    cursor: pointer;
+    background: black;
+    width: 200px;
+    display: block;
+    color: white;
+    text-align: right;
+    transform: translateX(-168px);
+    padding: 10px;
+}
+  
+nav{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-200px);
+    border-style: solid;
+    border-radius: 1px;
+    border-color:white;
+}
+  
+#hamburger-logo,
+nav{
+    transition: 0.7s;
+}
+  
+#hamburger:checked ~ #hamburger-logo,
+#hamburger:checked ~ nav {
+    transform: translate(0);
+}
+  
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+  
+nav a:hover{
+    background: #444;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main section{
+    background-color:cadetblue;
+    border-style: solid;
+    border-radius: 1px;
+    border-color:white;
+}
+main article{
+    background-color: cadetblue;
+    border-style: solid;
+    border-radius: 1px;
+    border-color:white;
+}
+.titre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    background-color: brown;
+    height: 60px;
+    margin: 10px;
+}
+footer{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+main aside{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+}
+
+
+@media screen and (min-width: 800px){
+    body{
+        background-color:black;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 20px;
+        font-size: 20px;
+
+
+    }
+    header{
+    background-color:rgb(165, 42, 42);
+    height: 60px;
+    margin: 10px;
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color:white;
+    }
+    #hamburger{
+        display: none;
+    }
+    #hamburger-logo{
+        display: none;
+    }
+    nav a:hover{
+        color:#fff358;
+        text-decoration: underline;
+    }
+    main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color:white;
+    }
+    main section{
+        background-color:cadetblue;
+        border-style: solid;
+        border-radius: 1px;
+        border-color:white;
+    }
+    main article{
+        background-color: cadetblue;
+        border-style: solid;
+        border-radius: 1px;
+        border-color:white;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .titre{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color:white;
+        background-color: brown;
+        height: 60px;
+        margin: 10px;
+        border-style: solid;
+        border-radius: 1px;
+        border-color:white;
+    }
+    footer{
+        color: white;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+    main aside{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    main img{
+        display: flex;
+    }
+}
